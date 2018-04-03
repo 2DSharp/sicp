@@ -7,19 +7,27 @@
 ;; Improve the guess by averaging guess and x/guess.
 ;; Keep improving till it's good enough
 
-(define (avg x y)
-  (/ (+ x y) 2))
+;; Defining a new square root procedure
+;; Block structure
+(define (new-sqrt x)
 
-(define (improve guess x)
-  (avg guess
-	(/ x guess)))
+  (define (avg x y)
+    (/ (+ x y) 2))
 
-(define (good-enough? guess x)
-  (= (/ x guess) guess))
+  (define (improve guess x)
+    (avg guess
+	 (/ x guess)))
+  ;; Although I had ideas to do an equals check with square of guess and x
+  ;; And avg(g,x/g) = g
+  ;; This one seems to work on everything better
+  ;; Way to go MIT!
+  (define (good-enough? guess x)
 
-(define (try guess x)
-  (if (good-enough? guess x)
-      guess
-      (try (improve guess x) x)))
+    (< (abs (- x (square guess)))
+       0.001))
 
-(print (try 1 25))
+  (define (try guess x)
+    (if (good-enough? guess x)
+	guess
+	(try (improve guess x) x)))
+  (try 1 x))
