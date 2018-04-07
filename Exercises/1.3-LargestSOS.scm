@@ -1,0 +1,15 @@
+(define (largest-sos x y z)
+  (define (smallest-of-three x y z)
+    (cond ((and (< x y) (< x z)) x)
+	  ((and (< y x) (< y z)) y)
+	  (else z)))
+  (define (square a)
+    (* a a))
+  (define (sum-of-squares a b)
+    (+ (square a) (square b)))
+
+  (define smallest (smallest-of-three x y z))
+  (cond ((= x smallest) (sum-of-squares y z))
+	((= y smallest) (sum-of-squares x z))
+	(else (sum-of-squares x y))))
+  
