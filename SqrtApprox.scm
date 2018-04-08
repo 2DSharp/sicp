@@ -10,7 +10,8 @@
 ;; Defining a new square root procedure
 ;; Block structure
 (define (new-sqrt x)
-
+  (define (square a)
+    (* a a))
   (define (avg x y)
     (/ (+ x y) 2))
 
