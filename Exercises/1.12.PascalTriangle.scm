@@ -1,5 +1,5 @@
 ;; SICP- Second Edition
-;; Exercise 1.11
+;; Exercise 1.12
 ;; Author- Dedipyaman Das (2d@twodee.me)
 ;; Iterative process
 (define (pascal-triangle row column)
