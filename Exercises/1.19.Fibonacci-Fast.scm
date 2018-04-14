@@ -1,3 +1,9 @@
+;; SICP- Second Edition
+;; Exercise 1.19
+;; Author- Dedipyaman Das (2d@twodee.me)
+;; Successive squaring to find fibonacci
+;; Derived by given formula
+
 (define (is-even? x)
   (= (remainder x 2) 0))
 (define (square x) (* x x))

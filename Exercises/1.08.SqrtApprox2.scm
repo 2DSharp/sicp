@@ -1,5 +1,5 @@
 ;; SICP- Second Edition
-;; Exercise 1.7
+;; Exercise 1.8
 ;; Author- Dedipyaman Das (2d@twodee.me)
 ;; Square root finder with an improved 'good-enough?'
 ;; Works with way greater numbers than 17738094999818 - Where it failed
