@@ -28,7 +28,7 @@
 	(end (end-segment segment)))
     (sqrt (+ (square (- (x-point start) (x-point end)))
 	     (square (- (y-point start) (y-point end)))))))
-
+;; The required procedures
 (define (perimeter length breadth)
   (* 2 (+ length breadth)))
 (define (area length breadth)
