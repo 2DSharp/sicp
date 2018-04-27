@@ -1,5 +1,5 @@
 ;; SICP- Second Edition
-;; Exercise 1.8
+;; Exercise 1.7
 ;; Author- Dedipyaman Das (2d@twodee.me)
 ;; Square root finder with an improved 'good-enough?'
 ;; Works with way greater numbers than 17738094999818 - Where it failed
@@ -20,6 +20,6 @@
        0.001))
   (define (try guess)
     (if (good-enough? guess)
-	guess
+	(improve guess)
 	(try (improve guess))))
   (try 1))
