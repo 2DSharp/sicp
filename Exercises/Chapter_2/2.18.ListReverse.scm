@@ -1,7 +1,7 @@
 ;; SICP- Second Edition
-;; Author- Dedipyaman Das (2d@twodee.me)
 ;; Exercise 2.18
 ;; Reverse the elements in a list
+;; Author- Dedipyaman Das (2d@twodee.me)
 
 (define (reverse items)
   (if (null? (cdr items))
